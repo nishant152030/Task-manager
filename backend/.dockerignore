@@ -1,17 +1,9 @@
-# Contents of the file: /task-api-backend/.dockerignore
-
 bin/
 obj/
 *.user
 *.suo
-*.sln.ide
-*.vscode/
-*.csproj.user
-*.db
+.vs/
+.vscode/
+node_modules/
+package-lock.json
 *.log
-*.md
-Dockerfile
-README.md
-appsettings.Development.json
-appsettings.json
-launchSettings.json
