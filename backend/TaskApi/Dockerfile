@@ -4,10 +4,12 @@ EXPOSE 80
 
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
-COPY ["TaskApi/TaskApi.csproj", "TaskApi/"]
-RUN dotnet restore "TaskApi/TaskApi.csproj"
+# When build context is TaskApi/, copy csproj directly
+COPY ["TaskApi.csproj", "./"]
+RUN dotnet restore "TaskApi.csproj"
+# Copy remaining files
 COPY . .
-WORKDIR "/src/TaskApi"
+WORKDIR "/src"
 RUN dotnet build "TaskApi.csproj" -c Release -o /app/build
 
 FROM build AS publish
