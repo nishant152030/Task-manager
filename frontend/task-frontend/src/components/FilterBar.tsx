@@ -1,5 +1,3 @@
-import React from "react";
-
 type Filter = "all" | "active" | "completed";
 
 type Props = {
@@ -16,3 +14,4 @@ export default function FilterBar({ current, onChange }: Props) {
     </div>
   );
 }
+
