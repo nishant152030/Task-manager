@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import type { TaskItem } from "./api";
 import { getTasks, addTask as apiAdd, toggleTask as apiToggle, deleteTask as apiDelete } from "./api";
 import AddTask from "./components/AddTask";
