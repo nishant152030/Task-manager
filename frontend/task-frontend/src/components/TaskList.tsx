@@ -1,4 +1,3 @@
-import React from "react";
 import type { TaskItem } from "../api";
 
 type Props = {
@@ -30,3 +29,4 @@ export default function TaskList({ tasks, onToggle, onDelete }: Props) {
     </ul>
   );
 }
+
