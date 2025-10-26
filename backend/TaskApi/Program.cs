@@ -37,4 +37,6 @@ app.UseSwaggerUI();
 app.UseCors();
 app.MapControllers();
 
-app.Run("http://localhost:5000");
+var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
+app.Run($"http://0.0.0.0:{port}");
+
